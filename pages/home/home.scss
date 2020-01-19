@@ -1,0 +1,53 @@
+page-home {
+    .list-ios {
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+    .list-md {
+        margin-bottom: 60px;
+    }
+    button {
+        background-color: transparent;
+        margin-bottom: 5px;
+    }
+    .content-ios,
+    .content {
+        background-color: #096da8;
+    }
+
+    .frequency{
+        font-size: 10px;
+        color: white;
+    }
+
+    ion-header {
+        width: 100%;
+        padding-top: 64.5%;
+        position: relative;
+    }
+
+    .hero {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .radio-button {
+        border: 2px solid rgba(255, 255, 255, .2);
+        border-radius: 45px;
+        display: inline-block;
+        padding: 0 10px;
+        width: 100%;
+        max-width: 150px;
+        height: 90px;
+
+        &__logo {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+        }
+    }
+}

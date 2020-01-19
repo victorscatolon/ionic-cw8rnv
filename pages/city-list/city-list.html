@@ -1,0 +1,17 @@
+<ion-header padding>
+  <ion-buttons start>
+    <button (click)="closeModal()" ion-button icon-only>
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-buttons>
+  <img [src]="logoSrc" />
+  <h3>selecione uma estação</h3>
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines>
+    <ion-item *ngFor="let radio of radios" (click)="onRadioSelect(radio)">
+      {{ radio.cidade }}
+    </ion-item>
+  </ion-list>
+</ion-content>

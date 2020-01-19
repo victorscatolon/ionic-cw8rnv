@@ -1,0 +1,50 @@
+page-city-list {
+    ion-content {
+        background-image: url('../assets/imgs/bg_city.jpg');
+    }
+    ion-content .fixed-content,
+    ion-content .scroll-content {
+        margin-top: 200px!important;
+    }
+    ion-header img {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    ion-header h3 {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .button-ios,
+    .button-ios:hover,
+    .button-ios:visited,
+    .button-ios:focus,
+    .button-md,
+    .button-md:hover,
+    .button-md:visited,
+    .button-md:focus {
+        background-color: transparent;
+    }
+    .ion-ios-close:before,
+    .ion-md-close:before {
+        font-size: 5rem;
+        font-weight: bold;
+    }
+    ion-list .item-ios,
+    ion-list .item-md {
+        background-color: transparent;
+    }
+    ion-label {
+        text-align: center;
+        color: #bae2fc;
+        font-size: 2.375rem;
+        font-weight: 200;
+    }
+    .label-ios,
+    .label-md {
+        margin: 15px 8px 15px 0;
+    }
+}

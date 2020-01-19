@@ -1,0 +1,121 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.toolbar-background {
+    border-color: #2a2b4f;
+    background: #2a2b4f;
+}
+
+.button-ios,
+.button-ios:hover,
+.button-ios:focus,
+.button-ios:visited {
+    background-color: #ba131b;
+    border-radius: 50px;
+    margin: -4px;
+    height: 2em;
+}
+
+.button-md,
+.button-md:hover,
+.button-md:focus,
+.button-md:visited {
+    background-color: #ba131b;
+    border-radius: 50px;
+    margin: 0
+}
+
+.button-inner {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.toolbar-title {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.toolbar-ios ion-title {
+    top: 0;
+    position: relative;
+    width: initial;
+    height: initial;
+    margin-bottom: 3px;
+    transform: translateZ(0);
+    pointer-events: none;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+.toolbar-md ion-title {
+    top: 0;
+    position: relative;
+    width: initial;
+    height: initial;
+    margin-bottom: 3px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    pointer-events: none;
+    padding: 0;
+}
+
+ion-toolbar.ion-md-pin:before,
+ion-toolbar.ion-ios-pin:before {
+    color: #96e1fb;
+}
+
+ion-toolbar ion-icon {
+    color: #96e1fb;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.ion-md-play:before,
+.ion-ios-play:before,
+.ion-md-pause:before,
+.ion-ios-pause:before {
+    color: #2a2b4f;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    line-height: 28px;
+    position: relative;
+    -webkit-box-align: center;
+    display: flex;
+}
+
+.header-md::after,
+.tabs-md[tabsPlacement="top"]>.tabbar::after,
+.footer-md::before,
+.tabs-md[tabsPlacement="bottom"]>.tabbar::before {
+    display: none;
+}
+
+.button-md {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+}
+
+ion-header .city-list{
+    margin-bottom: 30px;
+}

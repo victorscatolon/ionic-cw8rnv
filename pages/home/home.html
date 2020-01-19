@@ -1,17 +1,60 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <img [src]="heroImageSrc" class="hero"/>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content color="primary">
+  <ion-list no-lines>
+    <ion-row>
+      <ion-col col-6 text-center *ngFor="let radio of radios">
+        <button (click)="onRadioSelect(radio)" class="radio-button">
+          <img [src]="radio.Imagem_app2" class="radio-button__logo" />
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-list>
 </ion-content>
+
+<ion-footer *ngIf="selectedRadio">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+          <button ion-button>no ar</button>
+        </ion-col>
+
+        <ion-col col-6>
+          <ion-title>{{ selectedRadio.title }}</ion-title>
+          <ion-icon name="pin" *ngIf="selectedRadio.cidade">
+            {{ selectedRadio.cidade }}</ion-icon
+          >
+          <span class="frequency">{{ selectedRadio.frequency }}</span>
+        </ion-col>
+
+        <ion-col col-2>
+          <ion-icon
+            [name]="isPlaying ? 'pause' : 'play'"
+            (click)="playPause()"
+            isActive="true"
+          ></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div
+      class="anuncios"
+      text-center
+      style="padding: 4px"
+      *ngIf="selectedRadio.advertisingActive"
+    >
+      <a
+        href="#"
+        (click)="openLink($event, selectedRadio.advertisingLink)"
+        style="display: block;"
+      >
+        <img
+        [src]="selectedRadio.advertisingBanner"
+        style="width:100%"
+        />
+      </a>
+    </div>
+  </ion-toolbar>
+</ion-footer>
